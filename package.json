@@ -1,0 +1,28 @@
+{
+    "name": "verify-authenticode",
+    "description": "",
+    "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rajivshah3/node-verify-authenticode.git"
+    },
+    "author": "Rajiv Shah <rajivshah1@icloud.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rajivshah3/node-verify-authenticode/issues"
+    },
+    "homepage": "https://github.com/rajivshah3/node-verify-authenticode#readme",
+    "main": "lib/binding.js",
+    "scripts": {
+        "pretest": "tsc",
+        "test": "node --napi-modules ./test/test_binding.js"
+    },
+    "dependencies": {
+        "node-addon-api": "^1.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^14.14.35",
+        "typescript": "^2.3.3"
+    },
+    "gypfile": true
+}
