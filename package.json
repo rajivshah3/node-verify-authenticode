@@ -12,8 +12,9 @@
         "url": "https://github.com/rajivshah3/node-verify-authenticode/issues"
     },
     "homepage": "https://github.com/rajivshah3/node-verify-authenticode#readme",
-    "main": "lib/binding.js",
+    "main": "dist/binding.js",
     "scripts": {
+        "build:js": "tsc",
         "pretest": "tsc",
         "test": "node --napi-modules ./test/test_binding.js"
     },
@@ -24,5 +25,6 @@
         "@types/node": "^14.14.35",
         "typescript": "^4.2.3"
     },
-    "gypfile": true
+    "gypfile": true,
+    "types": "dist/binding.d.ts"
 }
