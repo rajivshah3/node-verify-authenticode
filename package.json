@@ -16,7 +16,7 @@
     "scripts": {
         "build:js": "tsc",
         "pretest": "tsc",
-        "test": "node --napi-modules ./test/test_binding.js"
+        "test": "node --napi-modules --unhandled-rejections=strict ./test/test_binding.js"
     },
     "dependencies": {
         "node-addon-api": "^3.1.0"
