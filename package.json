@@ -6,8 +6,8 @@
         "type": "git",
         "url": "git+https://github.com/rajivshah3/node-verify-authenticode.git"
     },
-    "author": "Rajiv Shah <rajivshah1@icloud.com>",
-    "license": "MIT",
+    "author": "Rajiv Shah <rajiv@iota.org>",
+    "license": "Apache-2.0",
     "bugs": {
         "url": "https://github.com/rajivshah3/node-verify-authenticode/issues"
     },
