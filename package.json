@@ -26,5 +26,8 @@
         "typescript": "^4.2.3"
     },
     "gypfile": true,
-    "types": "dist/binding.d.ts"
+    "types": "dist/binding.d.ts",
+    "os": [
+        "win32"
+    ]
 }
