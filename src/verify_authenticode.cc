@@ -180,8 +180,7 @@ BOOL VerifyCertificateChain(LPWSTR lpszFileName, LPWSTR lpszSubjectName, LPWSTR 
 	HCRYPTMSG hMsg = NULL;
 	PCCERT_CONTEXT pCertContext = NULL;
 	PCCERT_CONTEXT pTSCertContext = NULL;
-	BOOL fResult;
-	BOOL fReturn = FALSE;
+	BOOL fResult = FALSE;
 	DWORD dwEncoding, dwContentType, dwFormatType;
 	PCMSG_SIGNER_INFO pSignerInfo = NULL;
 	PCMSG_SIGNER_INFO pCounterSignerInfo = NULL;
@@ -447,6 +446,8 @@ BOOL VerifyCertificateChain(LPWSTR lpszFileName, LPWSTR lpszSubjectName, LPWSTR 
 				GetLastError());
 			__leave;
 		}
+
+		fResult = FALSE;
 
 		printf("\nAuthenticode TS chain verification status:\n");
 		if (PolicyStatus.dwError != ERROR_SUCCESS)
