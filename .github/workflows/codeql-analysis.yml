@@ -1,0 +1,29 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  CodeQL-Build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: cpp
+          config-file: ./.github/codeql/codeql-config.yml
+        
+      - name: Build C++ code
+        run: yarn
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
