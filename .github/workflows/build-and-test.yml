@@ -12,12 +12,12 @@ jobs:
     runs-on: 'windows-latest'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js 14.x
-        uses: actions/setup-node@v2
+      - name: Set up Node.js 18.x
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: 18
       
       - name: Download test file
         run: |
